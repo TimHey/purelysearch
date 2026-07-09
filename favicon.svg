@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <circle cx="32" cy="32" r="32" fill="#c85a2a"/>
+  <text x="32" y="33" text-anchor="middle" dominant-baseline="central"
+        font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+        font-size="42" font-weight="800" letter-spacing="-1.5" fill="#ffffff">P</text>
+</svg>

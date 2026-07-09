@@ -1,0 +1,27 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "PurelySearch",
+    "identifier": "did:web:purelysearch.com",
+    "documentationUrl": "https://purelysearch.com/llms.txt",
+    "logoUrl": "https://purelysearch.com/icon-512.png"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:purelysearch.com:service:daily-brief",
+      "displayName": "PurelySearch Daily Brief",
+      "type": "text/html",
+      "url": "https://purelysearch.com/sms.html",
+      "description": "A free personalized daily brief delivered by SMS. A person enters a US mobile number and picks topics (local news, sports, stocks, weather, home reminders) to receive one short text each morning. Reply to personalize, STOP to cancel, HELP for help. Consent is never a condition of purchase.",
+      "tags": ["sms", "daily-brief", "news", "weather", "sports", "stocks", "free"],
+      "capabilities": ["signup", "personalize", "unsubscribe"],
+      "representativeQueries": [
+        "free daily news text message",
+        "sign up for a morning weather text",
+        "simple SMS sports and stocks digest",
+        "daily brief by text with no app or login",
+        "text message reminders for trash day and bills"
+      ]
+    }
+  ]
+}
