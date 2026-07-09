@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text updates — PurelySearch</title>
+  <meta name="description" content="Opt in to receive text messages from PurelySearch about your inquiry, scheduling, and project updates.">
+  <link rel="canonical" href="https://purelysearch.com/sms.html">
+  <meta name="robots" content="noindex">
+  <style>
+    :root {
+      --bg: #f4efe6;
+      --surface: #ffffff;
+      --text: #1c1b19;
+      --muted: #57534c;
+      --rule: #e3dccf;
+      --accent: #c85a2a;
+      --cta: #f4c24e;
+      --cta-hover: #edb534;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    .wrap { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+
+    header .wrap {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 1.1rem; padding-bottom: 1.1rem;
+    }
+    .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--text); }
+    .mark {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--accent); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.05rem; letter-spacing: -0.03em;
+    }
+    .wordmark { font-weight: 800; font-size: 1.25rem; letter-spacing: 0.12em; color: var(--text); }
+
+    main { padding: 2.5rem 0 4rem; }
+    h1 { font-weight: 800; font-size: clamp(1.9rem, 5vw, 2.6rem); letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    .lede { color: var(--muted); font-size: 1.08rem; margin-bottom: 2rem; }
+
+    .form-card {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+      padding: 1.9rem;
+    }
+    label.field { display: block; font-weight: 700; margin-bottom: 0.4rem; }
+    input[type="tel"], input[type="text"] {
+      width: 100%;
+      border: 1.5px solid var(--rule);
+      border-radius: 10px;
+      padding: 0.8rem 0.9rem;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #fbf8f2;
+    }
+    input:focus { outline: none; border-color: var(--accent); }
+    .consent {
+      display: flex; gap: 0.7rem; align-items: flex-start;
+      margin: 1.4rem 0 1.2rem;
+    }
+    .consent input { margin-top: 0.35rem; width: 18px; height: 18px; flex: 0 0 auto; accent-color: var(--accent); }
+    .consent label { font-size: 0.95rem; color: var(--text); }
+    .fine { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.9rem; }
+    .fine strong { color: var(--text); }
+    .btn-cta {
+      display: inline-block; width: 100%;
+      background: var(--cta); color: var(--text);
+      font-weight: 800; font-size: 1.02rem;
+      padding: 0.9rem 1.7rem; border-radius: 999px;
+      border: none; cursor: pointer; font-family: inherit;
+      margin-top: 0.4rem;
+    }
+    .btn-cta:hover { background: var(--cta-hover); }
+    .btn-cta:disabled { opacity: 0.55; cursor: not-allowed; }
+    .success {
+      display: none;
+      background: #e7f0d9; border: 1px solid #c9dca0;
+      border-radius: 12px; padding: 1.2rem 1.3rem; color: #33420f; font-weight: 600;
+    }
+    .terms-line { font-size: 0.85rem; color: var(--muted); margin-top: 1.3rem; }
+
+    footer { border-top: 1px solid var(--rule); }
+    footer .wrap {
+      display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem;
+      align-items: center; justify-content: space-between;
+      padding-top: 1.6rem; padding-bottom: 1.6rem;
+      font-size: 0.88rem; color: var(--muted);
+    }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <a class="brand" href="/">
+        <span class="mark">P</span>
+        <span class="wordmark">PURELYSEARCH</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <h1>Get text updates from PurelySearch</h1>
+      <p class="lede">Working with us on a project or inquiry? Opt in below and we'll text you scheduling details, follow-ups, and updates so nothing gets lost in your inbox.</p>
+
+      <div class="form-card">
+        <form id="sms-form" novalidate>
+          <label class="field" for="phone">Mobile phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel" required>
+
+          <div class="consent">
+            <input type="checkbox" id="consent" name="consent">
+            <label for="consent">Yes, I'd like to receive text messages from PurelySearch about my inquiry, scheduling, and project updates. I understand consent is not a condition of purchase.</label>
+          </div>
+
+          <p class="fine"><strong>Message frequency:</strong> Message frequency varies based on your conversation and project with us.</p>
+          <p class="fine"><strong>Standard rates:</strong> Message and data rates may apply depending on your mobile plan.</p>
+          <p class="fine"><strong>Help &amp; stop:</strong> Reply HELP for help or STOP to cancel at any time. By providing your number and checking the box above, you agree to receive text messages from PurelySearch. Consent is not required to make a purchase.</p>
+
+          <button type="submit" class="btn-cta" id="submit-btn" disabled>Yes, sign me up!</button>
+
+          <p class="terms-line">See our <a href="/terms.html">Terms of Service</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
+        </form>
+
+        <div class="success" id="success">
+          Thanks! You're opted in. We'll text you from our PurelySearch number. Reply STOP any time to cancel.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>PurelySearch LLC · Hilton Head Island, SC</span>
+      <span>
+        <a href="/terms.html">Terms</a> ·
+        <a href="/privacy.html">Privacy</a> ·
+        <a href="mailto:tim@purelysearch.com">tim@purelysearch.com</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    var consent = document.getElementById('consent');
+    var btn = document.getElementById('submit-btn');
+    var form = document.getElementById('sms-form');
+    var success = document.getElementById('success');
+
+    consent.addEventListener('change', function () {
+      btn.disabled = !consent.checked;
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!consent.checked) return;
+      var phone = document.getElementById('phone').value.trim();
+      if (!phone) {
+        document.getElementById('phone').focus();
+        return;
+      }
+      form.style.display = 'none';
+      success.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
