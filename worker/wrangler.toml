@@ -1,0 +1,13 @@
+name = "purelysearch-edge"
+main = "src/worker.js"
+compatibility_date = "2026-06-01"
+
+# Run in front of the whole apex zone. The worker logs agent hits and serves
+# /api/agent-traffic; everything else falls through to GitHub Pages (origin).
+routes = [
+  { pattern = "purelysearch.com/*", zone_name = "purelysearch.com" }
+]
+
+# Secrets (set with `wrangler secret put`, not committed):
+#   UPSTASH_REDIS_REST_URL
+#   UPSTASH_REDIS_REST_TOKEN
